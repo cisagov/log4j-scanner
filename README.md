@@ -80,11 +80,11 @@ As many in industry, we did not feel the need to "re-invent the wheel". This
 recommended scanning solution is derived from the great work of others (with slight modifications). We've included two additional
 projects to avoid using third-parties.
 
-[log4-scanner](https://github.com/fullhunt/log4j-scan) - Log4j vulnerability scanning framework. **Thank you to the fullhunt.io team.**
+[log4-scanner](https://github.com/fullhunt/log4j-scan) - Log4j vulnerability scanning framework. **Thank you to the @fullhunt.io team.**
 
-[dns](https://gist.github.com/pklaus/b5a7876d4d2cf7271873) - Simple DNS server (UDP and TCP) in Python. **Thank you pklaus & andreif.**
+[dns](https://gist.github.com/pklaus/b5a7876d4d2cf7271873) - Simple DNS server (UDP and TCP) in Python. **Thank you @pklaus & @andreif.**
 
-[ldap](https://github.com/mbechler/marshalsec) - Contains useful code to test the lookup() call. **Thank you mbechler**
+[ldap](https://github.com/mbechler/marshalsec) - Contains useful code to test the lookup() call. **Thank you @mbechler**
 
 
 ## Issues ##
