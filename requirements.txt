@@ -1,0 +1,4 @@
+requests
+termcolor
+PyCryptodome
+dnslib
