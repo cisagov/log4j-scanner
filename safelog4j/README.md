@@ -1,4 +1,5 @@
 # safelog4j
+[Announcement](https://www.contrastsecurity.com/security-influencers/instantly-inoculate-your-servers-against-log4j-with-new-open-source-tool)
 [Primary Repository](https://github.com/Contrast-Security-OSS/safelog4j)
 <p align="center"><b>
 <br>
