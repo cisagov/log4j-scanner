@@ -86,6 +86,8 @@ projects to avoid using third-parties.
 
 [ldap](https://github.com/mbechler/marshalsec) - Contains useful code to test the lookup() call. **Thank you @mbechler**
 
+[safelog4j](https://github.com/Contrast-Security-OSS/safelog4j) - An Agent that tests Java applications for vulnerable log4j, and patches them when needed. **Thank you @ContrastSec**
+
 
 ## Issues ##
 
