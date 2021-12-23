@@ -29,11 +29,6 @@
 			<version>1.12.5</version>
 		</dependency>
 		<dependency>
-			<groupId>org.cyclonedx</groupId>
-			<artifactId>cyclonedx-core-java</artifactId>
-			<version>5.0.4</version>
-		</dependency>
-		<dependency>
 			<groupId>com.sun</groupId>
 			<artifactId>tools</artifactId>
 			<version>any</version>
