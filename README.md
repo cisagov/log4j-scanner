@@ -1,7 +1,7 @@
 # Log4j Scanner #
 
 This repository provides a scanning solution for the log4j Remote Code Execution vulnerabilities (CVE-2021-44228 & CVE-2021-45046). 
-The information and code in this repository is provided "as is" and was assembled with the help of the open-source community and updated by CISA through collaboration with the broader cybersecurity community.
+The information and code in this repository is provided "as is" and was assembled with the help of the open-source community and updated by CISA through collaboration with the broader cybersecurity community. This is not intended to be a 100% true positive solution; False negatives may occur.
 
 ## Official CISA Guidance & Resources ##
 
@@ -29,7 +29,7 @@ The information and code in this repository is provided "as is" and was assemble
 
 - Modify the `dns/ddnsserver.py` script with the value of the NS record above (`test.example.com`) 
 
-- `python3 dns/ddnsserver.py --udp 53 >> dns-results.txt`
+- `python3 ddnsserver.py --port 53 --udp >> dns-results.txt`
 
 - Test it with `nslookup hello.test.example.com`. You can run `tail -f dns-results.txt` to monitor these logs. 
 
