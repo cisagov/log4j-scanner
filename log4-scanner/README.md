@@ -62,7 +62,7 @@ optional arguments:
   --test-CVE-2021-45046
                         Test using payloads for CVE-2021-45046 (detection payloads).
   --dns-callback-provider DNS_CALLBACK_PROVIDER
-                        DNS Callback provider (Options: dnslog.cn, interact.sh) - [Default: interact.sh].
+                        DNS Callback provider (Options: interact.sh) - [Default: interact.sh]
   --custom-ip-callback-host CUSTOM_IP_CALLBACK_HOST
                         Option to specify IP address and Port instead of DNS Callback
   --custom-dns-callback-host CUSTOM_DNS_CALLBACK_HOST

@@ -15,7 +15,7 @@ raise Exception("Can not initiate interact.sh DNS callback client")
 Exception: Can not initiate interact.sh DNS callback client
 ```
 
-It means that the DNS callback provider is down, it's blocked on your network, or you can not connect to the DNS callback provider due to networking issues. You can use an different DNS Callback provider (eg.. with `--dns-callback-provider dnslog.cn`), or you can use a custom DNS callback host with ` --custom-dns-callback-host`.
+It means that the DNS callback provider is down, it's blocked on your network, or you can not connect to the DNS callback provider due to networking issues. You can use a custom DNS callback host with ` --custom-dns-callback-host`.
 
 ---
 
