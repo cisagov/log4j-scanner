@@ -23,7 +23,8 @@ from Crypto.PublicKey import RSA
 from Crypto.Hash import SHA256
 from termcolor import cprint
 # add datetime
-from datetime import datetime
+#from datetime import datetime
+from time import gmtime, strftime
 from termcolor import colored
 import re
 
@@ -159,6 +160,11 @@ parser.add_argument("--disable-http-redirects",
                     dest="disable_redirects",
                     help="Disable HTTP redirects. Note: HTTP redirects are useful as it allows the payloads to have a higher chance of reaching vulnerable systems.",
                     action='store_true')
+# Print Individual Header
+parser.add_argument("--show-header",
+                    dest="show_header",
+                    help="Prints Request with Header and UTC Time information",
+                    action='store_true')
 
 args = parser.parse_args()
 
@@ -180,7 +186,9 @@ def get_fuzzing_headers(payload):
             i = i.strip()
             if i == "" or i.startswith("#"):
                 continue
-            fuzzing_headers.update({i: payload})
+            payload2=re.sub("HEADER",i,payload) # RegEx to replace HEADER with header value
+            #print("UPDATE FUZZING PAYLOAD: " + str(payload2))
+            fuzzing_headers.update({i: payload2})
     if args.exclude_user_agent_fuzzing:
         fuzzing_headers["User-Agent"] = default_headers["User-Agent"]
 
@@ -347,13 +355,14 @@ def scan_url(url, callback_host):
                 time.sleep(int(args.sleep_time))
                 # RegEx to replace "HEADER" with the Header being sent
                 newPayload = re.sub("HEADER",i,payload)
-                #print("newPayload is: " + newPayload) # Verbose if needed?
-                print("Request: " + colored("GET", 'green') + " Header " + colored(i, 'green') + ' at ' + colored(str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")), 'green'))
+                # Added Verbose feature based of --show-header 
+                if args.show_header:
+                    (print("Request: " + colored("GET", 'green') + " Header " + colored(i, 'green') + ' at ' + colored(str(strftime("%Y-%m-%d %H:%M:%S", gmtime())), 'green') + " UTC"))
                 try:
                     requests.request(url=url,
                                  method="GET",
-                                 params={"v": str(newPayload)},
-                                 headers={i:str(newPayload)},
+                                 params={"v": newPayload},
+                                 headers={i: newPayload},
                                  verify=False,
                                  timeout=timeout,
                                  allow_redirects=(not args.disable_redirects),
@@ -397,7 +406,9 @@ def scan_url(url, callback_host):
                 # RegEx to replace "HEADER" with the Header being sent
                 newPayload = re.sub("HEADER",i,payload)
                 time.sleep(int(args.sleep_time))
-                print("Request: " + colored("POST", 'green') + " Header " + colored(i, 'green') + ' at ' + colored(str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")), 'green'))
+                # Added verbose based of --show-header
+                if args.show_header:
+                    print("Request: " + colored("POST", 'green') + " Header " + colored(i, 'green') + ' at ' + colored(str(strftime("%Y-%m-%d %H:%M:%S", gmtime())), 'green') + " UTC")
                 try:
                     # Post body
                     requests.request(url=url,
