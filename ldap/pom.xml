@@ -185,7 +185,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>4.3.7.RELEASE</version>
+			<version>4.3.30.RELEASE</version>
 		</dependency>
 
 		<dependency>
