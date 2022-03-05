@@ -209,7 +209,7 @@
 		<dependency>
 			<groupId>com.rometools</groupId>
 			<artifactId>rome</artifactId>
-			<version>1.7.0</version>
+			<version>1.18.0</version>
 		</dependency>
 
 		<dependency>
