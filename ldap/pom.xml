@@ -203,7 +203,7 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
-			<version>1.8.6</version>
+			<version>1.9.8</version>
 		</dependency>
 
 		<dependency>
