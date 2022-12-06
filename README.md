@@ -1,5 +1,7 @@
 # Log4j Scanner #
 
+This repo is archived as of 6 Dec 2022 - and is no longer being maintained.
+
 This repository provides a scanning solution for the log4j Remote Code Execution vulnerabilities (CVE-2021-44228 & CVE-2021-45046). 
 The information and code in this repository is provided "as is" and was assembled with the help of the open-source community and updated by CISA through collaboration with the broader cybersecurity community. This is not intended to be a 100% true positive solution; False negatives may occur.
 
